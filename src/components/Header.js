@@ -11,7 +11,7 @@ class Header extends React.Component{
                     
                     <Dropdown/>
                     
-                    <Router>
+                    <Router forceRefresh={true}>
                         <ul className="nav mx-auto p-2 flex-fill bd-highlight d-flex flex-row header-nav">
                             <li className="nav-item mx-auto font-weight-bold px-1">
                                 <Link to="/">Home</Link>
