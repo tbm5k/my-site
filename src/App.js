@@ -6,7 +6,7 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="App bg-light">
+    <div className="App">
       <Header/>
       <Main/>
       <Footer/>
