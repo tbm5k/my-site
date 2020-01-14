@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter as Router, Link, Switch, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Link} from 'react-router-dom'
 import Dropdown from './Dropdown'
 
 class Header extends React.Component{
@@ -12,7 +12,7 @@ class Header extends React.Component{
                     <Dropdown/>
                     
                     <Router forceRefresh={true}>
-                        <ul className="nav mx-auto p-2 flex-fill bd-highlight d-flex flex-row header-nav">
+                        <ul className="nav flex-fill bd-highlight d-flex flex-row header-nav">
                             <li className="nav-item mx-auto font-weight-bold px-1">
                                 <Link to="/">Home</Link>
                             </li>
