@@ -1,5 +1,4 @@
 import React from 'react'
-import { render } from '@testing-library/react';
 
 class Projects extends React.Component{
 
@@ -16,11 +15,11 @@ class Projects extends React.Component{
         fetch('https://api.github.com/users/tbm5k/repos')
             .then(res => res.json())
             .then(data => {
+                console.log(data)
                 this.setState({
                     list : data,
                     isLoad : true
                 });
-                console.log(this.state.list)
             });
     }
 
@@ -31,16 +30,17 @@ class Projects extends React.Component{
                 {console.log('changed to Projects page')}
                 {  
                     !this.state.isLoad ? <p>Loading...</p> : 
-                    <ul>
-                        {
-                            this.state.list.map(repo => 
-                                <li>
-                                    Repo : {repo.name}
-                                    <a href={repo.html_url}>link</a>
-                                </li>    
-                            )
-                        }
-                    </ul>
+                    <div className="card">
+                            {
+                                this.state.list.map(repo => 
+                                    <div className="card-body" key={repo.id}>
+                                        <h5 className="card-title">{repo.name}</h5>
+                                        <p className="card-text">{repo.description}</p>
+                                        <a href={repo.html_url} className="btn btn-primary">View project</a>
+                                    </div>
+                                )
+                            }
+                    </div>
                 }
             </div>
         );
