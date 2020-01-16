@@ -1,5 +1,11 @@
 import React from 'react'
 
+const card = {
+    width: '18rem',
+    marginLeft:'15px',
+    marginBottom:'25px'
+}
+
 class Projects extends React.Component{
 
     constructor(props){
@@ -30,14 +36,18 @@ class Projects extends React.Component{
                 {console.log('changed to Projects page')}
                 {  
                     !this.state.isLoad ? <p>Loading...</p> : 
-                    <div className="card">
+                    <div className="row">
                             {
                                 this.state.list.map(repo => 
-                                    <div className="card-body" key={repo.id}>
-                                        <h5 className="card-title">{repo.name}</h5>
-                                        <p className="card-text">{repo.description}</p>
-                                        <a href={repo.html_url} className="btn btn-primary">View project</a>
-                                    </div>
+                                    <div className="col-sm-6">
+                                        <div className=" card text-left" style={card} key={repo.id}>
+                                            <div className="card-body">
+                                                <h5 className="card-title">{repo.name}</h5>
+                                                <p className="card-text">{repo.description}</p>
+                                                <a href={repo.html_url} className="btn btn-primary">View project</a>
+                                            </div>
+                                        </div>
+                                    </div>  
                                 )
                             }
                     </div>

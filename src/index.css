@@ -48,6 +48,15 @@ a{
   justify-content: center;
 }
 
+.card{
+  height:224px;
+}
+
+.card-text{
+  height: 72px;
+  overflow: hidden;
+}
+
 .header-nav{
   display: none;
   margin-left: 30%;
@@ -112,7 +121,7 @@ a{
 
 @media (min-width : 768px){
   .child-container{
-    max-width:75%;
+    max-width:90%;
   }
 
   nav{
