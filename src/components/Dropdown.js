@@ -1,4 +1,5 @@
 import React from 'react'
+import {BrowserRouter as Router, Link} from 'react-router-dom'
 
 class Dropdown extends React.Component {
     constructor(){
@@ -34,11 +35,19 @@ class Dropdown extends React.Component {
       
                 { this.state.displayMenu ? 
                 (
-                  <ul className="drop-ul">
-                    <li className="drop-li"><a className="active" href="#Create Page">Home</a></li>
-                    <li className="drop-li"><a href="#Manage Pages">Projects</a></li>
-                    <li className="drop-li"><a href="#Create Ads">About</a></li> 
-                  </ul>
+                  <Router forceRefresh={true}>
+                    <ul className="drop-ul">
+                      <li className="drop-li">
+                        <Link to="/">Home</Link>
+                      </li>
+                      <li className="drop-li">
+                        <Link to="/projects">Projects</Link>
+                      </li>
+                      <li className="drop-li">
+                        <Link to="/about">About</Link>
+                      </li> 
+                    </ul>
+                  </Router>
                 ):
                 (
                   null
