@@ -1,7 +1,7 @@
 import React from 'react'
 
 const card = {
-    width: '18rem',
+    width: '13rem',
     marginLeft:'15px',
     marginBottom:'25px'
 }

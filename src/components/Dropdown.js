@@ -29,23 +29,23 @@ class Dropdown extends React.Component {
     
       render() {
         return (
-            <div  className="dropdown" style = {{background:"red",width:"200px"}} >
-             <div className="button" onClick={this.showDropdownMenu}> My Setting </div>
-    
-              { this.state.displayMenu ? (
-              <ul className="drop-ul">
-                <li className="drop-li"><a className="active" href="#Create Page">Home</a></li>
-                <li className="drop-li"><a href="#Manage Pages">Projects</a></li>
-                <li className="drop-li"><a href="#Create Ads">About</a></li> 
-              </ul>
-            ):
-            (
-              null
-            )
-            }
-    
-           </div>
-    
+            <div  className="dropdown">
+              <div className="button" onClick={this.showDropdownMenu}>Menu</div>
+      
+                { this.state.displayMenu ? 
+                (
+                  <ul className="drop-ul">
+                    <li className="drop-li"><a className="active" href="#Create Page">Home</a></li>
+                    <li className="drop-li"><a href="#Manage Pages">Projects</a></li>
+                    <li className="drop-li"><a href="#Create Ads">About</a></li> 
+                  </ul>
+                ):
+                (
+                  null
+                )
+              }
+              
+            </div>
         );
       }
     }

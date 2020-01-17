@@ -48,10 +48,6 @@ a{
   justify-content: center;
 }
 
-.card{
-  height:224px;
-}
-
 .card-text{
   height: 72px;
   overflow: hidden;
@@ -62,11 +58,17 @@ a{
   margin-left: 30%;
 }
 
+.nav-item{
+  float: left;
+  margin-left:20px;
+}
+
 /*Dropdown*/
 
 .dropdown {
   position: relative;
   display: inline-block;
+  width:150px;
 }
 .drop-ul {
   list-style-type: none;
@@ -74,7 +76,7 @@ a{
   padding: 0;
   top:45px;
   right:0px;
-  width: 200px;
+  width: 150px;
   background-color: white;
   font-weight:bold;
   position: absolute;
@@ -98,10 +100,9 @@ a{
   color: white;
 }
 .button{
-  width:178px;
-  height:18px;
-  background-color:#ff3232 ;
-  padding:12px;
+  width:150px;
+  height:25px;
+  background-color:tomato ;
   border-radius:5px;
   font-weight:bold;
   color:white;
