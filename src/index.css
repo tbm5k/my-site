@@ -57,12 +57,10 @@ a{
 
 .header-nav{
   display: none;
-  text-align: center;
 }
 
 .nav-item{
-  float: left;
-  margin-left:18%;
+  margin: 0 5%;
 }
 
 /*Dropdown*/
@@ -122,7 +120,7 @@ a{
 
 /*Media queries*/
 
-@media (min-width : 769px){
+@media (min-width : 768px){
   .child-container{
     max-width:90%;
   }
@@ -137,6 +135,8 @@ a{
   }
 
   .header-nav{
-    display: inline;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
   }
 }
