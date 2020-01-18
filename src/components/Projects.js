@@ -1,9 +1,7 @@
 import React from 'react'
 
 const card = {
-    width: '13rem',
-    marginLeft:'15px',
-    marginBottom:'25px'
+    marginBottom:'30px'
 }
 
 class Projects extends React.Component{
@@ -38,7 +36,7 @@ class Projects extends React.Component{
                     <div className="row">
                             {
                                 this.state.list.map(repo => 
-                                    <div className="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center">
+                                    <div className="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center box">
                                         <div className=" card text-left" style={card} key={repo.id}>
                                             <div className="card-body">
                                                 <h5 className="card-title">{repo.name}</h5>

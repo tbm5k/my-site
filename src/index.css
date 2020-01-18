@@ -46,8 +46,11 @@ a{
   align-items: center;
   flex-direction: row;
   justify-content: center;
+  width: 80%;
+}
 
-  padding:20px 0;
+.card{
+  width:262.67px
 }
 
 .card-text{
@@ -60,7 +63,12 @@ a{
 }
 
 .nav-item{
-  margin: 0 5%;
+  margin: 0 5px;
+}
+
+.row{
+  margin-left: 0;
+  margin-right: 0;
 }
 
 /*Dropdown*/
@@ -115,7 +123,7 @@ a{
   border: 10px solid;
   border-color: white transparent transparent transparent;
   right:6px;
-  top:18px;
+  top:8px;
 }
 
 /*Media queries*/
