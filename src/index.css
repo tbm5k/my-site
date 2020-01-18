@@ -47,6 +47,7 @@ a{
   flex-direction: row;
   justify-content: center;
   width: 80%;
+  padding:30px 0;
 }
 
 .card{
@@ -129,6 +130,7 @@ a{
 /*Media queries*/
 
 @media (min-width : 768px){
+
   .child-container{
     max-width:90%;
   }
