@@ -55,12 +55,11 @@ a{
 
 .header-nav{
   display: none;
-  margin-left: 30%;
 }
 
 .nav-item{
-  float: left;
-  margin-left:20px;
+  float: right;
+  margin-left:5%;
 }
 
 /*Dropdown*/
