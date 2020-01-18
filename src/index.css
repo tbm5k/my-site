@@ -67,6 +67,11 @@ a{
   margin: 0 15px;
 }
 
+.li:hover{
+  color: rgb(190, 105, 190);
+  text-decoration: none;
+}
+
 .row{
   margin-left: 0;
   margin-right: 0;

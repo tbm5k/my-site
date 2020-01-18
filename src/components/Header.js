@@ -12,13 +12,13 @@ class Header extends React.Component{
                     <Router forceRefresh={true}>
                         <ul className="nav flex-fill bd-highlight header-nav">
                             <li className="nav-item font-weight-bold px-1">
-                                <Link to="/">Home</Link>
+                                <Link className="li" to="/">Home</Link>
                             </li>
                             <li className="nav-item font-weight-bold px-1">
-                                <Link to="/projects">Projects</Link>
+                                <Link className="li" to="/projects">Projects</Link>
                             </li>
                             <li className="nav-item font-weight-bold px-1">
-                                <Link to="/about">About</Link>
+                                <Link className="li" to="/about">About</Link>
                             </li>
                         </ul>    
                     </Router>
