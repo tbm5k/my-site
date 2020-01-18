@@ -1,7 +1,8 @@
 import React from 'react'
 
 const styling = {
-    fontSize : '.6rem'
+    fontSize : '.6rem',
+    paddingBottom : '10px'
 }
 
 function Footer(){
@@ -18,8 +19,7 @@ function Footer(){
                     <a className="nav-link" href="https://twitter.com/tbm5k" target="_blank" rel="noopener noreferrer"><img src="icons/twitter.png" alt="TW"/></a>
                 </li>
             </ul>
-            <div style={styling}>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-            <p style={styling}>&copy;tbm5k</p>
+            <div style={styling}>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a><br></br>&copy;tbm5k</div>
         </footer>
     );
 }

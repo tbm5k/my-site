@@ -32,14 +32,13 @@ class Projects extends React.Component{
     render(){
         return(
             <div>
-                <h2>Projects</h2>
                 {console.log('changed to Projects page')}
                 {  
                     !this.state.isLoad ? <p>Loading...</p> : 
                     <div className="row">
                             {
                                 this.state.list.map(repo => 
-                                    <div className="col-sm-6 d-flex justify-content-center">
+                                    <div className="col-sm-4 d-flex justify-content-center">
                                         <div className=" card text-left" style={card} key={repo.id}>
                                             <div className="card-body">
                                                 <h5 className="card-title">{repo.name}</h5>
