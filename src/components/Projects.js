@@ -41,7 +41,7 @@ class Projects extends React.Component{
                                             <div className="card-body">
                                                 <h5 className="card-title">{repo.name}</h5>
                                                 <p className="card-text">{repo.description}</p>
-                                                <a href={repo.html_url} className="btn btn-primary">View project</a>
+                                                <a href={repo.html_url} className="btn btn-outline-dark">View project</a>
                                             </div>
                                         </div>
                                     </div>  
