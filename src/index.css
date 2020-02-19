@@ -77,6 +77,14 @@ a{
   margin-right: 0;
 }
 
+/*image*/
+.img{
+  width: 150px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+}
+
+
 /*Dropdown*/
 
 .dropdown {
