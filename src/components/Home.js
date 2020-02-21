@@ -1,10 +1,17 @@
 import React from 'react'
 
+const styling= {
+    fontFamily : 'Caveat',
+    fontWeight:'bold',
+    fontSize: '30px',
+    paddingTop:'15%'
+}
+
 function Home(){
     return(
         <p className="container">
                 <img className="img" src="images/pic.jpg" alt="icon"/>
-                Hi, I make websites and webapps
+                <p style={styling}>Hi, I make websites and webapps</p>
                 {console.log('changed to Home page')}
         </p>
     );

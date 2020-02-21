@@ -44,7 +44,7 @@ class Dropdown extends React.Component {
                         <Link to="/projects">Projects</Link>
                       </li>
                       <li className="drop-li">
-                        <Link to="/about">About</Link>
+                        <Link to="/contact">Contact</Link>
                       </li> 
                     </ul>
                   </Router>
