@@ -5,7 +5,7 @@ class Contact extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            from : '',
+            from : 'example@gmail.com',
             message : 'Type a message...'
         }
 
@@ -24,19 +24,23 @@ class Contact extends React.Component{
     }
 
     handleSubmit(event){
-        alert('Email : ' + this.state.from + 'Message : ' + this.state.message);
+        alert('Email : ' + this.state.from + '\n'+ 'Message : ' + this.state.message);
         event.preventDefault();
     }
 
     render(){
         return(
-            <div>
-                <form onSubmit={this.handleSubmit}>
-                    <input name="from" type="email" value={this.state.from} onChange={this.handleInputChange}/>
-                    <textarea name="message" type="text" value={this.state.message} onChange={this.handleInputChange}/>
-                    <input type="submit" value="submit"/>
-                </form>
-            </div>
+            <form onSubmit={this.handleSubmit}>
+                <div className="form-group">
+                    <label for="exampleFormControlInput1">Your email</label>
+                    <input name="from" type="email" class="form-control bg-transparent btn-outline-dark" value={this.state.from} onChange={this.handleInputChange}/>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Message</label>
+                    <textarea name="message" type="text" class="form-control bg-transparent btn-outline-dark" value={this.state.message} onChange={this.handleInputChange}/>
+                </div>
+                <input type="submit" className="btn btn-outline-dark" value="submit"/>
+            </form>
         );
     }
 }
