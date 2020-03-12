@@ -5,7 +5,7 @@ class Contact extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            from : 'example@gmail.com',
+            fromAddress : 'example@gmail.com',
             message : 'Type a message...'
         }
 
@@ -16,7 +16,7 @@ class Contact extends React.Component{
     handleInputChange(event){
 
         const target = event.target
-        const value = target.type === "email" ? target.from : target.message;
+        const value = target.type === "email" ? target.fromAddress : target.message;
 
         this.setState({
             [target.name] : event.target.value
@@ -24,8 +24,16 @@ class Contact extends React.Component{
     }
 
     handleSubmit(event){
-        alert('Email : ' + this.state.from + '\n'+ 'Message : ' + this.state.message);
+        alert('Email : ' + this.state.fromAddress + '\n'+ 'Message : ' + this.state.message);
         event.preventDefault();
+        fetch('http://localhost:8080/message', {
+            method: 'POST',
+            headers: {'Content-Type':'application/json'},
+            body: JSON.stringify({
+                'fromAddress':this.state.fromAddress,
+                'message': this.state.message
+            })
+        });
     }
 
     render(){
@@ -33,7 +41,7 @@ class Contact extends React.Component{
             <form onSubmit={this.handleSubmit}>
                 <div className="form-group">
                     <label for="exampleFormControlInput1">Your email</label>
-                    <input name="from" type="email" class="form-control bg-transparent btn-outline-dark" value={this.state.from} onChange={this.handleInputChange}/>
+                    <input name="fromAddress" type="email" class="form-control bg-transparent btn-outline-dark" value={this.state.from} onChange={this.handleInputChange}/>
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1">Message</label>
