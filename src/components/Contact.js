@@ -5,21 +5,26 @@ class Contact extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            value : ' '
+            from : '',
+            message : 'Type a message...'
         }
 
-        this.handleChange = this.handleChange.bind(this);
+        this.handleInputChange = this.handleInputChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleChange(event){
+    handleInputChange(event){
+
+        const target = event.target
+        const value = target.type === "email" ? target.from : target.message;
+
         this.setState({
-            value: event.target.value
+            [target.name] : event.target.value
         });
     }
 
     handleSubmit(event){
-        alert('Name : ' + this.state.value);
+        alert('Email : ' + this.state.from + 'Message : ' + this.state.message);
         event.preventDefault();
     }
 
@@ -27,7 +32,8 @@ class Contact extends React.Component{
         return(
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <input type="text" value={this.state.value} onChange={this.handleChange}/>
+                    <input name="from" type="email" value={this.state.from} onChange={this.handleInputChange}/>
+                    <textarea name="message" type="text" value={this.state.message} onChange={this.handleInputChange}/>
                     <input type="submit" value="submit"/>
                 </form>
             </div>
