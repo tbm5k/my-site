@@ -24,7 +24,7 @@ class Contact extends React.Component{
     }
 
     handleSubmit(event){
-        alert('Email : ' + this.state.fromAddress + '\n'+ 'Message : ' + this.state.message);
+        //alert('Email : ' + this.state.fromAddress + '\n'+ 'Message : ' + this.state.message);
         event.preventDefault();
         fetch('http://localhost:8080/message', {
             method: 'POST',
@@ -41,11 +41,11 @@ class Contact extends React.Component{
             <form onSubmit={this.handleSubmit}>
                 <div className="form-group">
                     <label for="exampleFormControlInput1">Your email</label>
-                    <input name="fromAddress" type="email" class="form-control bg-transparent btn-outline-dark" value={this.state.from} onChange={this.handleInputChange}/>
+                    <input name="fromAddress" type="email" class="form-control bg-transparent btn-outline-dark" value={this.state.from} onChange={this.handleInputChange} required/>
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1">Message</label>
-                    <textarea name="message" type="text" class="form-control bg-transparent btn-outline-dark" value={this.state.message} onChange={this.handleInputChange}/>
+                    <textarea name="message" type="text" class="form-control bg-transparent btn-outline-dark" value={this.state.message} onChange={this.handleInputChange} required/>
                 </div>
                 <input type="submit" className="btn btn-outline-dark" value="submit"/>
             </form>
