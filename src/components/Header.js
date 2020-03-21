@@ -7,7 +7,7 @@ class Header extends React.Component{
         return(
             <header>
                 <nav className="navbar navbar-light d-flex bd-highlight">
-                    <span className="navbar-brand mb-0 h1 p-2 flex-fill bd-highlight" style={{textAlign:'left'}}><a href="#" style={{color:'inherit', textDecoration:'none'}}>Teddy Mbugua</a></span>
+                    <span className="navbar-brand mb-0 h1 p-2 flex-fill bd-highlight" style={{textAlign:'left'}}><p>Teddy Mbugua</p></span>
                     
                     <Router forceRefresh={true}>
                         <ul className="nav flex-fill bd-highlight header-nav">
