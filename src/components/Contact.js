@@ -16,10 +16,10 @@ class Contact extends React.Component{
     handleInputChange(event){
 
         const target = event.target
-        const value = target.type === "email" ? target.fromAddress : target.message;
-
+        const name = target.name
+    
         this.setState({
-            [target.name] : event.target.value
+            [name] : target.value
         });
     }
 
@@ -41,7 +41,7 @@ class Contact extends React.Component{
             <form onSubmit={this.handleSubmit}>
                 <div className="form-group">
                     <label for="exampleFormControlInput1">Your email</label>
-                    <input name="fromAddress" type="email" class="form-control bg-transparent btn-outline-dark" value={this.state.from} onChange={this.handleInputChange} required/>
+                    <input name="fromAddress" type="email" class="form-control bg-transparent btn-outline-dark" value={this.state.fromAddress} onChange={this.handleInputChange} required/>
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1">Message</label>
