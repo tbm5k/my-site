@@ -33,6 +33,12 @@ class Contact extends React.Component{
                 'fromAddress':this.state.fromAddress,
                 'message': this.state.message
             })
+        }).then(res => {
+            if(res.status === 200){
+                alert("Submitted")
+            }else{
+                alert("Not submitted, try again")
+            }
         });
     }
 
