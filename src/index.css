@@ -21,6 +21,10 @@ main {
   min-height: calc(100vh - 180px);
 }
 
+.form-group{
+  text-align: left;
+}
+
 .footer {
   height: 50px;
 }
@@ -138,6 +142,21 @@ a{
   border-color: white transparent transparent transparent;
   right:6px;
   top:8px;
+}
+
+/*Loader*/
+.loader {
+  border: 10px solid #ddd7d7; /* Light grey */
+  border-top: 10px solid #677279; /* Blue */
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 /*Media queries*/
