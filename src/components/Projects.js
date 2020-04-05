@@ -32,7 +32,7 @@ class Projects extends React.Component{
             <div>
                 {console.log('changed to Projects page')}
                 {  
-                    !this.state.isLoad ? <p>Loading...</p> : 
+                    !this.state.isLoad ? <div class="loader"></div> : 
                     <div className="row">
                             {
                                 this.state.list.map(repo => 
