@@ -1,2 +1,4 @@
 # Teddy Mbugua
-My portfolio website
+### My portfolio website
+
+![Website screenshot](index.png)
