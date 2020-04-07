@@ -33,13 +33,11 @@ function App() {
       </header>
       <main className="container main-container">
           <div className="child-container">
-              <Router>
-                  <Switch>
-                      <Route exact path="/" component={Home} />
-                      <Route path="/projects" component={Projects} />
-                      <Route path="/contact" component={Contact} />
-                  </Switch>
-              </Router>
+            <Switch>
+                <Route exact path="/" component={Home} />
+                <Route path="/projects" component={Projects} />
+                <Route path="/contact" component={Contact} />
+            </Switch>   
           </div>
       </main>
       </Router>
