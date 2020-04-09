@@ -11,7 +11,7 @@ import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 function App() {
   return (
     <div className="App">
-      <Router forceRefresh={true}>
+      <Router>
       <header>
         <nav className="navbar navbar-light d-flex bd-highlight">
           <span className="navbar-brand mb-0 h1 p-2 flex-fill bd-highlight" style={{textAlign:'left'}}>Teddy Mbugua</span>
