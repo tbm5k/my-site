@@ -173,7 +173,7 @@ a{
   }
 
   .dropdown{
-    display: none;
+    display: inline-block;
   }
 
   .header-nav{
