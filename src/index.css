@@ -161,6 +161,12 @@ a{
 
 /*Media queries*/
 
+@media (max-width: 576px) {
+  form{
+    width: 200px;
+  }
+}
+
 @media (min-width : 768px){
 
   .child-container{
