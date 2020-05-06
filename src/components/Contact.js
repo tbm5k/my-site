@@ -26,7 +26,7 @@ class Contact extends React.Component{
     handleSubmit(event){
         //alert('Email : ' + this.state.fromAddress + '\n'+ 'Message : ' + this.state.message);
         event.preventDefault();
-        fetch('http://tbm5k.herokuapp.com/message', {
+        fetch('***', {
             method: 'POST',
             headers: {'Content-Type':'application/json'},
             body: JSON.stringify({
