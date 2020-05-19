@@ -5,7 +5,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 //import Main from "./components/Main";
-import {BrowserRouter as Router, Link, Switch, Route} from 'react-router-dom';
+import {HashRouter as Router, Link, Switch, Route} from 'react-router-dom';
 
 class App extends React.Component {
   constructor(){
@@ -37,7 +37,7 @@ class App extends React.Component {
   render (){
     return (
       <div className="App">
-        <Router >
+        <Router>
           <header>
           <nav className="navbar navbar-light d-flex bd-highlight">
               <span className="navbar-brand mb-0 h1 p-2 flex-fill bd-highlight" style={{textAlign:'left'}}>Teddy Mbugua</span>
